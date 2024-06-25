@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint</title>
+    <style>
+        body,
+        html {
+            padding: 0;
+            margin: 0;
+        }
+
+        .text {
+            font-size: 20px;
+            text-align: center;
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: blueviolet;
+        }
+
+
+        p {
+            height: 500px;
+            /* 
+              如果设置为 120px 就无法触发平板批注的滚动了，这个点设置在左边、右边、中间都可以，
+              设置 margin 或者 padding 都可以，反正这个英文的小点不能太靠边，否则也无法触发滚动，
+              大致可以猜出它的原理就是需要识别出屏幕上要有内容的像素点，否则就不会触发滚动批注。
+            */
+            /* padding-left: 130px;  */
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text">
+        <span>The Begin</span>
+    </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p> <!-- 19th row，第20个p标签的时候，就已经超出批注的最长长度了 -->
+    <div class="text">
+        <span>The End</span>
+    </div>
+</body>
+
+</html>
